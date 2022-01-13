@@ -8,7 +8,7 @@ export const deleteTask=(id)=>{
         payload:id
     }
 }
-export const addTask=(NewTodo)=>{
+export const handelAdd=(NewTodo)=>{
     return{
         type:ADD_TASK,
         payload:NewTodo

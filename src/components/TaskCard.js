@@ -6,17 +6,8 @@ import { ADD_TASK } from '../redux1/actionType';
 
 const TaskCard = ({task}) => {
     const dispatch = useDispatch();
-    const[NewTodo,setNewTodo]=useState();
-    const handlechange=event=>setNewTodo(event.target.value);
-    const handClick=()=>dispatch({
-        type:ADD_TASK,
-        payload:{
-            label :NewTodo }
-    })
     return (
         <div>
-            <input value={NewTodo} onChange={handlechange} type="text"/>
-            <button onClick={handClick}>ADD TODO</button>
            <h1>{task.action}</h1>  
            <button onClick={()=>dispatch(deleteTask(task.id))}>Delete</button> 
         </div>

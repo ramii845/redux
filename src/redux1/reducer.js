@@ -19,7 +19,7 @@ switch (type) {
         case ADD_TASK:
             return {
                 ...state,
-                tasks:[...state.tasks,action.payload],
+                tasks:[...state.tasks,payload],
             }
 
     default:
